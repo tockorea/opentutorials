@@ -2,8 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body id="target">
     <header>
@@ -19,11 +22,17 @@
     </nav>
     <div id="control">
       <input type="button" value="black" onclick="
-        document.getElementById('target').className = 'black';
+        $('#target').attr('class', 'black');
       ">
+      <!-- javascript를 jquery로 변경 -->
+      <!-- document.getElementById('target').className = 'black'; -->
+      <!-- $('#target').attr('class', 'black'); -->
       <input type="button" value="white" onclick="
-        document.getElementById('target').className = 'white';
+        $('#target').attr('class', 'white');
       ">
+      <!-- javascript를 jquery로 변경 -->
+      <!-- document.getElementById('target').className = 'white'; -->
+      <!-- $('#target').attr('class', 'white'); -->
     </div>
     <article>
       <?php
@@ -41,5 +50,8 @@
         }
        ?>
     </article>
+    <!-- Bootstrap -->
+    <script src="jquery-3.2.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
