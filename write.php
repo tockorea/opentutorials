@@ -45,28 +45,12 @@
       <a href="write.php">쓰기</a>
     </div>
     <article>
-      <?php
-        // // 만약 id 파라미터의 값이 있다면
-        // if (isset($_GET['id'])) {
-        //   // id 파라미터를 이용해서 파일명을 만든다.
-        //   $filename = $_GET['id'].'.txt';
-        //   // 파일명의 파일을 읽어서 출력한다.
-        //   echo file_get_contents($filename);
-        // } else {
-        // 텍스트파일 → MySQL로 변경
-        if (empty($_GET['id']) === false) {
-          $sql = 'SELECT * FROM topic WHERE id = '.$_GET['id'];
-          $result = mysqli_query($conn, $sql);
-          $row = mysqli_fetch_assoc($result);
-          echo '<h2>'.$row['title'].'</h2>';
-          echo $row['description'];
-        } else {
-       ?>
-          <h2>Welcom</h2>
-          Happy coding!!
-      <?php
-        }
-       ?>
+      <form action="process.php" method="post">
+        <p>제목 : <input type="text" name="title"></p>
+        <p>작성자 : <input type="text" name="author"></p>
+        <p>본문 : <textarea name="description"></textarea></p>
+        <input type="submit" name="제출">
+      </form>
     </article>
     <!-- Bootstrap -->
     <script src="jquery-3.2.1.js"></script>
