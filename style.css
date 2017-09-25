@@ -1,34 +1,5 @@
-header {
-  border-bottom: 1px solid gray;
-  padding: 20px;
-}
-
-nav {
-  border-right: 1px solid gray;
-  width: 150px;
-  float: left;
-  height: 600px;
-}
-
-nav ol {
-  list-style: none;
-}
-
-article {
-  float: left;
-  padding: 20px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
 body.black {
   background-color: black;
-  color: white;
-}
-
-body.black a {
   color: white;
 }
 
@@ -37,7 +8,10 @@ body.white {
   color: black;
 }
 
+.container-fluid{
+  padding-top: 20px;
+}
+
 #control {
-  float: right;
-  padding: 10px;
+  margin-bottom: 40px;
 }
