@@ -12,13 +12,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
   </head>
   <body id="target">
-    <div class="container-fluid">
-      <header class="hero-unit">
+    <div class="container">
+      <header class="hero-unit text-center">
         <h1><a href="index.php">Web Application</a></h1>
       </header>
-      <div class="row-fluid">
+      <div class="row">
         <nav class="span3">
           <ol class="nav nav-pills nav-stacked">
             <?php
