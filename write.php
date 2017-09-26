@@ -21,7 +21,7 @@
       </header>
       <div class="row">
         <nav class="span3">
-          <ol class="nav nav-pills nav-stacked">
+          <ol class="nav nav-tabs nav-stacked">
             <?php
               // // list.txt 파일을 읽어서 출력한다.
               // echo file_get_contents('list.txt');

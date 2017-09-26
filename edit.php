@@ -35,27 +35,27 @@
         <div class="span9">
           <article>
             <?php
-              // // 만약 id 파라미터의 값이 있다면
-              // if (isset($_GET['id'])) {
-              //   // id 파라미터를 이용해서 파일명을 만든다.
-              //   $filename = $_GET['id'].'.txt';
-              //   // 파일명의 파일을 읽어서 출력한다.
-              //   echo file_get_contents($filename);
-              // } else {
-              // 텍스트파일 → MySQL로 변경
-              if (empty($_GET['id']) === false) {
-                $sql = 'SELECT * FROM topic WHERE id = '.$_GET['id'];
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
-                echo '<h2>'.$row['title'].'</h2>';
-                echo $row['description'];
-              } else {
+              $sql = 'SELECT * FROM topic WHERE id = '.$_GET['id'];
+              $result = mysqli_query($conn, $sql);
+              $row = mysqli_fetch_assoc($result);
              ?>
-                <h2>Welcom</h2>
-                Happy coding!!
-            <?php
-              }
-             ?>
+            <form action="process.php" method="post">
+              <div class="form-group">
+                <label for="form-title">제목</label>
+                <input type="text" class="form-control span9" name="title" id="form-title" placeholder="제목을 적어주세요." value="<?php echo $row['title'];?>">
+              </div>
+              <div class="form-group">
+                <label for="form-author">작성자</label>
+                <input type="text" class="form-control span9" name="author" id="form-author" placeholder="작성자를 적어주세요." value="<?php echo $row['author'];?>">
+              </div>
+              <div class="form-group">
+                <label for="form-description">본문</label>
+                <textarea type="text" rows="10" class="form-control span9" name="description" id="form-description" placeholder="본문을 적어주세요.">
+                  <?php echo $row['description'];?>
+                </textarea>
+              </div>
+              <input type="submit" name="제출" class="btn btn-default btn-large">
+            </form>
           </article>
           <hr>
           <div id="control">
@@ -74,17 +74,11 @@
               <!-- $('#target').attr('class', 'white'); -->
             </div>
             <a href="write.php" class="btn btn-success btn-large">쓰기</a>
-            <?php
-              if (empty($_GET['id']) === false) {
-                echo '<a href="edit.php?id='.$_GET['id'].'" class="btn btn-primary btn-large">편집</a>';
-              }
-             ?>
           </div>
         </div>
       </div>
     </div>
     <!-- Bootstrap -->
-    <!-- <script src="jquery-3.2.1.js"></script> -->
     <script src="jquery-3.2.1.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
