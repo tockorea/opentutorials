@@ -50,9 +50,7 @@
               </div>
               <div class="form-group">
                 <label for="form-description">본문</label>
-                <textarea type="text" rows="10" class="form-control span9" name="description" id="form-description" placeholder="본문을 적어주세요.">
-                  <?php echo $row['description'];?>
-                </textarea>
+                <textarea type="text" rows="10" class="form-control span9" name="description" id="form-description" placeholder="본문을 적어주세요."><?php echo $row['description'];?></textarea>
               </div>
               <input type="submit" name="제출" class="btn btn-default btn-large">
             </form>
