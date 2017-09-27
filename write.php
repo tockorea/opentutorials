@@ -45,29 +45,24 @@
               </div>
               <div class="form-group">
                 <label for="form-description">본문</label>
-                <textarea type="text" rows="10" class="form-control span9" name="description" id="form-description" placeholder="본문을 적어주세요.">
-                </textarea>
+                <textarea type="text" rows="10" class="form-control span9" name="description" id="form-description" placeholder="본문을 적어주세요."></textarea>
               </div>
-              <input type="submit" name="제출" class="btn btn-default btn-large">
+              <input type="submit" value="추가" class="btn btn-default btn-large">
             </form>
           </article>
           <hr>
           <div id="control">
             <div class="btn-group">
-              <input type="button" value="black" onclick="
-                $('#target').attr('class', 'black');
-              " class="btn btn-default btn-large">
+              <input type="button" value="black" onclick="$('#target').attr('class', 'black');" class="btn btn-default btn-large">
               <!-- javascript를 jquery로 변경 -->
               <!-- document.getElementById('target').className = 'black'; -->
               <!-- $('#target').attr('class', 'black'); -->
-              <input type="button" value="white" onclick="
-                $('#target').attr('class', 'white');
-              " class="btn btn-default btn-large">
+              <input type="button" value="white" onclick="$('#target').attr('class', 'white');" class="btn btn-default btn-large">
               <!-- javascript를 jquery로 변경 -->
               <!-- document.getElementById('target').className = 'white'; -->
               <!-- $('#target').attr('class', 'white'); -->
             </div>
-            <a href="write.php" class="btn btn-success btn-large">쓰기</a>
+            <a href="index.php" class="btn btn-success btn-large">홈으로</a>
           </div>
         </div>
       </div>

@@ -60,15 +60,11 @@
           <hr>
           <div id="control">
             <div class="btn-group">
-              <input type="button" value="black" onclick="
-                $('#target').attr('class', 'black');
-              " class="btn btn-default btn-large">
+              <input type="button" value="black" onclick="$('#target').attr('class', 'black');" class="btn btn-default btn-large">
               <!-- javascript를 jquery로 변경 -->
               <!-- document.getElementById('target').className = 'black'; -->
               <!-- $('#target').attr('class', 'black'); -->
-              <input type="button" value="white" onclick="
-                $('#target').attr('class', 'white');
-              " class="btn btn-default btn-large">
+              <input type="button" value="white" onclick="$('#target').attr('class', 'white');" class="btn btn-default btn-large">
               <!-- javascript를 jquery로 변경 -->
               <!-- document.getElementById('target').className = 'white'; -->
               <!-- $('#target').attr('class', 'white'); -->
@@ -77,6 +73,7 @@
             <?php
               if (empty($_GET['id']) === false) {
                 echo '<a href="edit.php?id='.$_GET['id'].'" class="btn btn-primary btn-large">편집</a>';
+                echo '<a href="process.php?remove='.$_GET['id'].'" class="btn btn-danger btn-large">삭제</a>';
               }
              ?>
           </div>
